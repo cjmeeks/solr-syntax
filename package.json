@@ -1,0 +1,25 @@
+{
+    "name": "solr",
+    "displayName": "solr",
+    "description": "Solr syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "solr",
+            "aliases": ["SolrSyntax", "solr"],
+            "extensions": [".solr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "solr",
+            "scopeName": "source.solr",
+            "path": "./syntaxes/solr.tmLanguage.json"
+        }]
+    }
+}

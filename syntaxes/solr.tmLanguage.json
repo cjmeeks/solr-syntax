@@ -1,0 +1,49 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SolrSyntax",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.solr",
+					"match": "\\~\\d"
+				},
+				{
+					"name": "keyword.operator.solr",
+					"match": "and|or|AND|OR|\\|\\||\\&\\&"
+				},
+				{
+					"match": "(-?\\w+:)(\\(([^()]*|\\([^()]*\\))*\\)|\\[.*?\\]|\\w+\\*?)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.solr"
+						},
+						"2": {
+							"name": "support.constant.solr"
+						}
+					}
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.solr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.solr",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.solr"
+}

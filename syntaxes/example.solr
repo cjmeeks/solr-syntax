@@ -1,0 +1,11 @@
+a a
+asdf
+-(a a)
+date:[2017-02-22 06:22 TO 2017-04-22 12:15]
+date:[2017-02-22 TO 2017-04-22]
+date:[* TO 10/19/2017 16:42]
+date:[10/19/2017 16:42 TO *]
+"this or that"
+"this or that"~4
+type:radiology and mod:(ct or mt or cx)
+type:(radiology or pathology)
